@@ -2,11 +2,13 @@ import React from "react";
 
 function Joke(props) {
   return (
-    <div className="joke-card">
-      <p style={{ display: props.question ? "block" : "none" }}>
+    <div>
+      <h3 style={{ display: !props.question && "none" }}>
         Question:{props.question}
-      </p>
-      <p>Punchline:{props.punchline}</p>
+      </h3>
+      <h3 style={{ color: !props.question && "#888888" }}>
+        Answer:{props.punchJoke}
+      </h3>
       <hr />
     </div>
   );
